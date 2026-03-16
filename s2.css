@@ -1,0 +1,343 @@
+/* --- Variables et Reset --- */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #1e293b;
+    --accent-color: #38bdf8;
+    --bg-color: #ffffff;
+    --navbar-beige: #f5f5dc;
+    --text-color: #334155;
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+/* --- Navigation --- */
+header {
+    background: var(--navbar-beige);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+}
+
+.nav-links img { width: 18px; height: 18px; }
+.nav-links a:hover { color: var(--primary-color); }
+
+/* --- Section À Propos (Modifiée : Police agrandie) --- */
+#about p {
+    font-size: 1.25rem; /* Police plus grande pour la présentation */
+    max-width: 1000px;
+    line-height: 1.8;
+}
+
+/* --- Hero Section --- */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: var(--white);
+    padding-top: 80px;
+}
+
+.hero img {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--navbar-beige);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.hero h1 span { color: var(--primary-color); }
+
+.hero-btns {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* --- Boutons Harmonisés (Hero & Projets) --- */
+/* Style identique pour "Voir mes projets", "Voir le projet" et "CV" */
+.btn, .project-card a, .btn-cv {
+    display: inline-block;
+    padding: 12px 28px;
+    text-decoration: none;
+    border-radius: 50px;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: var(--transition);
+    border: 2px solid var(--primary-color); /* Bordure pour l'effet hover */
+    text-align: center;
+}
+
+.btn, .project-card a {
+    background: var(--primary-color);
+    color: white;
+}
+
+.btn-cv {
+    background: var(--secondary-color);
+    color: white;
+    border-color: var(--secondary-color);
+}
+
+.btn:hover, .project-card a:hover, .btn-cv:hover {
+    background: transparent;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.2);
+}
+
+.btn-cv:hover {
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+/* --- Sections Communes --- */
+section {
+    padding: 80px 10%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.align_text {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.align_text img { width: 30px; }
+
+/* --- Skills --- */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 25px;
+    text-align: center;
+}
+
+.skill {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 12px;
+    transition: var(--transition);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+}
+
+.skill:hover { transform: scale(1.1); }
+.skill i { font-size: 3rem; color: var(--primary-color); }
+
+/* --- Projets --- */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.project-card {
+    background: var(--navbar-beige);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card img:last-child {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 15px;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.project-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.project-icon img { width: 40px; }
+
+/* --- Section Contact (Modifiée : Zones cliquables) --- */
+#contact {
+    text-align: center;
+    background-color: var(--white);
+    padding-bottom: 100px;
+}
+
+#contact p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: var(--secondary-color);
+}
+
+#contact p a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    transition: var(--transition);
+}
+
+#contact p a:hover { border-bottom: 2px solid var(--primary-color); }
+
+.contact_platforms {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+/* On rend le span cliquable en gérant le padding sur le lien interne */
+.contact_platforms span {
+    background: var(--navbar-beige);
+    border-radius: 12px;
+    transition: var(--transition);
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    padding: 0; /* Important : le lien à l'intérieur prendra tout l'espace */
+    overflow: hidden;
+}
+
+.contact_platforms span a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 25px; /* On déplace le padding ici */
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 600;
+    width: 100%;
+    height: 100%;
+}
+
+.contact_platforms span:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    background: var(--white);
+    border-color: var(--primary-color);
+}
+
+.contact_platforms span:hover a { color: var(--primary-color); }
+
+.contact_platforms img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 40px;
+    background: var(--secondary-color);
+    color: white;
+    margin-top: 50px;
+}
+
+footer a { color: var(--accent-color); }
+
+/* --- RESPONSIVE & BURGER --- */
+.burger { display: none; cursor: pointer; }
+
+.burger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--secondary-color);
+    margin: 5px;
+    transition: var(--transition);
+}
+
+@media screen and (max-width: 768px) {
+    #about p { font-size: 1.1rem; } /* Taille cohérente pour mobile */
+
+    .contact_platforms {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact_platforms span {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: var(--navbar-beige);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 60%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        box-shadow: -10px 0 10px rgba(0,0,0,0.05);
+    }
+
+    .nav-links li { opacity: 0; padding: 20px 0; }
+    .burger { display: block; }
+    .nav-active { transform: translateX(0%); }
+}
+
+@keyframes navLinkFade {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0px); }
+}
+
+.toggle span:nth-child(1) { transform: rotate(-45deg) translate(-5px, 6px); }
+.toggle span:nth-child(2) { opacity: 0; }
+.toggle span:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
