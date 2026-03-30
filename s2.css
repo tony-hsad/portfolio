@@ -176,12 +176,20 @@ section {
 
 /* --- Projets --- */
 .projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    display: flex;
     gap: 40px;
+    justify-content: center; /* centre les cards */
+    flex-wrap: wrap; /* passe à la ligne si pas assez de place */
+}
+
+#projects {
+    max-width: 75%; /* plus large que les autres sections */
 }
 
 .project-card {
+    flex: 1;
+    min-width: 350px; /* évite que ça devienne trop petit */
+    max-width: 450px; /* limite pour garder un beau design */
     background: var(--navbar-beige);
     border-radius: 15px;
     padding: 30px;
@@ -207,6 +215,37 @@ section {
 }
 
 .project-icon img { width: 40px; }
+
+#competences {
+    background-color: #f8fafc;
+}
+
+.competences-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.competence-card {
+    flex: 1;
+    min-width: 280px;
+    background: var(--white);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-left: 5px solid var(--primary-color);
+    transition: var(--transition);
+}
+
+.competence-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.competence-card p {
+    line-height: 1.7;
+}
 
 /* --- Section Contact (Modifiée : Zones cliquables) --- */
 #contact {
@@ -341,3 +380,24 @@ footer a { color: var(--accent-color); }
 .toggle span:nth-child(1) { transform: rotate(-45deg) translate(-5px, 6px); }
 .toggle span:nth-child(2) { opacity: 0; }
 .toggle span:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
+
+#mentions {
+    padding-top: 120px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#mentions h1 {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+#mentions h2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+#mentions p {
+    line-height: 1.8;
+}
