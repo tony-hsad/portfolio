@@ -367,6 +367,24 @@ footer a { color: var(--accent-color); }
         box-shadow: -10px 0 10px rgba(0,0,0,0.05);
     }
 
+    #mentions {
+        padding: 100px 20px 40px 20px; /* plus d'espace + marges latérales */
+        max-width: 100%;
+        font-size: 1.1rem; /* texte plus gros */
+    }
+
+    #mentions h1 {
+        font-size: 1.8rem;
+    }
+
+    #mentions h2 {
+        font-size: 1.3rem;
+    }
+
+    #mentions p {
+        font-size: 1.05rem;
+    }
+
     .nav-links li { opacity: 0; padding: 20px 0; }
     .burger { display: block; }
     .nav-active { transform: translateX(0%); }
@@ -385,6 +403,7 @@ footer a { color: var(--accent-color); }
     padding-top: 120px;
     max-width: 900px;
     margin: 0 auto;
+    font-size: 1.05rem;
 }
 
 #mentions h1 {
@@ -399,5 +418,6 @@ footer a { color: var(--accent-color); }
 }
 
 #mentions p {
-    line-height: 1.8;
+    line-height: 1.9;
+    margin-bottom: 15px;
 }
