@@ -17,7 +17,13 @@
     scroll-behavior: smooth;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
@@ -156,8 +162,11 @@ section {
 
 /* --- Skills --- */
 .skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* centre les items */
+    /*display: grid;*/
+    /*grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));*/
     gap: 25px;
     text-align: center;
 }
