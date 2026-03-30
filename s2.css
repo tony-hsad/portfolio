@@ -368,21 +368,21 @@ footer a { color: var(--accent-color); }
     }
 
     #mentions {
-        padding: 100px 20px 40px 20px; /* plus d'espace + marges latérales */
-        max-width: 100%;
-        font-size: 1.1rem; /* texte plus gros */
+        padding: 100px 20px 40px 20px;
+        font-size: 1.2rem; /* plus gros */
     }
 
     #mentions h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     #mentions h2 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 
     #mentions p {
-        font-size: 1.05rem;
+        font-size: 1.1rem;
+        line-height: 1.8;
     }
 
     .nav-links li { opacity: 0; padding: 20px 0; }
@@ -403,6 +403,7 @@ footer a { color: var(--accent-color); }
     padding-top: 120px;
     max-width: 900px;
     margin: 0 auto;
+    flex: 1;
     font-size: 1.05rem;
 }
 
